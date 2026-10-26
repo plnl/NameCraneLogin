@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PLNL · 本德 — 独立底栏</title>
+<link rel="stylesheet" href="bar.css" />
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;background:#05131f;color:#a9bfd0;
+       font-family:"Inter","PingFang SC",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .demo-note{
+    max-width:1180px;margin:0 auto;padding:22px clamp(20px,4vw,56px) 0;
+    font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#4f6c80;
+  }
+  .demo-spacer{height:clamp(48px,10vw,120px)}
+  .demo-light{background:#fff}
+  .demo-light .demo-note{color:#7d94a3}
+</style>
+</head>
+<body>
+
+  <p class="demo-note">深色 · 默认</p>
+  <div class="demo-spacer"></div>
+
+  <!-- ↓↓↓ 底栏本体（深色） ↓↓↓ -->
+  <footer class="plnl-bar">
+    <p class="plnl-bar__copy">
+      © 2026 PLNL · 本德<span class="sep" aria-hidden="true">·</span>保留所有权利
+    </p>
+    <div class="plnl-bar__meta">
+      <p class="plnl-bar__status">
+        <span class="plnl-bar__dot" aria-hidden="true"></span>全部服务运行正常
+      </p>
+      <a class="plnl-bar__domain" href="https://plnl.vip">plnl.vip</a>
+      <span class="sep" aria-hidden="true">·</span>
+      <a class="plnl-bar__icp" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+        粤ICP备2024320296号
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M14 4h6v6M20 4l-8.5 8.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <div class="demo-light">
+    <p class="demo-note">浅色 · .plnl-bar--light</p>
+    <div class="demo-spacer"></div>
+
+    <!-- ↓↓↓ 底栏本体（浅色） ↓↓↓ -->
+    <footer class="plnl-bar plnl-bar--light">
+      <p class="plnl-bar__copy">
+        © 2026 PLNL · 本德<span class="sep" aria-hidden="true">·</span>保留所有权利
+      </p>
+      <div class="plnl-bar__meta">
+        <p class="plnl-bar__status">
+          <span class="plnl-bar__dot" aria-hidden="true"></span>全部服务运行正常
+        </p>
+        <a class="plnl-bar__domain" href="https://plnl.vip">plnl.vip</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a class="plnl-bar__icp" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+          粤ICP备2024320296号
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M14 4h6v6M20 4l-8.5 8.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

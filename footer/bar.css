@@ -1,0 +1,123 @@
+/* ============================================================
+   PLNL · 本德 — 独立底栏（单行版权 / 状态 / 域名 / 备案）
+   不依赖 footer.css，整份复制即用
+   变体：.plnl-bar--light 浅色底
+   ============================================================ */
+
+.plnl-bar {
+  /* ---- 令牌 ---- */
+  --bar-ink: #a9bfd0;          /* 主要文字 */
+  --bar-mute: #7d93a5;         /* 版权行 */
+  --bar-accent: #8ec6ea;       /* 悬停 */
+  --bar-line: rgba(152, 188, 216, .14);
+  --bar-dot: #4ec98a;          /* 服务状态点 */
+  --bar-bg: transparent;
+
+  --bar-max: 1600px;   /* 超宽屏时内容不贴边，常见宽度下等同满宽 + 内边距 */
+  --bar-pad: clamp(20px, 4vw, 56px);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  width: 100%;
+  margin: 0;
+  padding: 18px max(var(--bar-pad), calc((100% - var(--bar-max)) / 2));
+  border-top: 1px solid var(--bar-line);
+  background: var(--bar-bg);
+  color: var(--bar-mute);
+  font-family: "Inter", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  font-size: 11.5px;
+  line-height: 1.7;
+  letter-spacing: .05em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 两侧各留一半，内容仍然按 1180 居中 */
+.plnl-bar__copy,
+.plnl-bar__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  margin: 0;
+}
+/* 版权行用行内排版，分隔点间距比 flex gap 更自然 */
+.plnl-bar__copy { display: block; }
+.plnl-bar__meta { margin-left: auto; justify-content: flex-end; }
+
+.plnl-bar p { margin: 0; }
+
+/* ---------- 链接 ---------- */
+.plnl-bar a {
+  color: var(--bar-ink);
+  text-decoration: none;
+  transition: color .18s cubic-bezier(.22, .61, .36, 1);
+}
+.plnl-bar a:hover { color: var(--bar-accent); }
+.plnl-bar a:focus-visible {
+  outline: 2px solid var(--bar-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* 域名：比备案号稍亮一点，形成层次 */
+.plnl-bar__domain { color: var(--bar-ink); }
+
+/* 备案号：合规要求必须可点击，指向工信部备案系统 */
+.plnl-bar a.plnl-bar__icp {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #8ba3b5;
+}
+.plnl-bar__icp svg { width: 10px; height: 10px; opacity: .65; transition: opacity .18s ease; }
+.plnl-bar__icp:hover { color: var(--bar-accent); }
+.plnl-bar__icp:hover svg { opacity: 1; }
+
+/* 分隔点 */
+.plnl-bar .sep { margin: 0 6px; color: rgba(152, 188, 216, .35); }
+
+/* ---------- 服务状态 ---------- */
+.plnl-bar__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--bar-ink);
+}
+.plnl-bar__dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--bar-dot);
+  box-shadow: 0 0 0 3px rgba(78, 201, 138, .16);
+}
+
+/* ---------- 浅色变体 ---------- */
+.plnl-bar--light {
+  --bar-bg: #f6f9fc;
+  --bar-ink: #3f5a6b;
+  --bar-mute: #5a7382;
+  --bar-accent: #1f6d9c;
+  --bar-line: rgba(18, 52, 74, .12);
+}
+.plnl-bar--light .plnl-bar__icp { color: #4a6272; }
+.plnl-bar--light .sep { color: rgba(18, 52, 74, .28); }
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 720px) {
+  .plnl-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+  .plnl-bar__meta { margin-left: 0; justify-content: flex-start; gap: 6px 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plnl-bar * { transition: none !important; }
+}

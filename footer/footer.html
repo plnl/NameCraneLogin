@@ -1,0 +1,96 @@
+<!-- ============================================================
+     PLNL · 本德 — 页脚（完整版）
+     用法：整段贴到页面底部，或用 <iframe> / 组件化方式引入
+     配色：改 footer.css 顶部 --f-* 变量即可
+     ============================================================ -->
+<footer class="plnl-footer">
+
+  <div class="plnl-footer__inner">
+
+    <!-- 品牌区 -->
+    <div class="plnl-brand-block">
+      <a class="plnl-brand" href="https://plnl.vip" aria-label="PLNL 本德 · 返回首页">
+        <span class="plnl-brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M3 17.5 9 9.5l3.4 4.6L15 11l6 6.5" stroke="#08202f" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="8.2" cy="6.4" r="1.6" fill="#08202f"/>
+          </svg>
+        </span>
+        <span class="plnl-brand__text">
+          <span class="plnl-brand__word">PLNL</span>
+          <span class="plnl-brand__cn">本德</span>
+        </span>
+      </a>
+
+      <p class="plnl-brand__tagline">
+        山高水长，守护如一。<br />自建家庭私有云与域名邮箱。
+      </p>
+
+      <a class="plnl-domain" href="https://plnl.vip" rel="noopener">
+        plnl.vip
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>
+          <path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- 产品 -->
+    <nav class="plnl-col" aria-labelledby="plnl-f-product">
+      <h2 class="plnl-col__title" id="plnl-f-product">产品</h2>
+      <ul>
+        <li><a href="https://plnl.vip">家庭控制台</a></li>
+        <li><a href="https://mail.plnl.vip">域名邮箱<span class="is-beta">BETA</span></a></li>
+        <li><a href="https://plnl.vip">私有云盘</a></li>
+        <li><a href="https://plnl.vip">相册备份</a></li>
+      </ul>
+    </nav>
+
+    <!-- 资源 -->
+    <nav class="plnl-col" aria-labelledby="plnl-f-docs">
+      <h2 class="plnl-col__title" id="plnl-f-docs">资源</h2>
+      <ul>
+        <li><a href="https://plnl.vip">服务状态</a></li>
+        <li><a href="https://plnl.vip">使用文档</a></li>
+        <li><a href="https://plnl.vip">更新日志</a></li>
+        <li><a href="https://github.com/plnl/NameCraneLogin" target="_blank" rel="noopener noreferrer">开源项目</a></li>
+      </ul>
+    </nav>
+
+    <!-- 联系 -->
+    <nav class="plnl-col" aria-labelledby="plnl-f-contact">
+      <h2 class="plnl-col__title" id="plnl-f-contact">联系</h2>
+      <ul>
+        <li><a href="mailto:admin@plnl.vip">admin@plnl.vip</a></li>
+        <li><a href="https://mail.plnl.vip">webmail 登录</a></li>
+        <li><a href="https://plnl.vip">提交工单</a></li>
+        <li><a href="https://plnl.vip">关于本德</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- 底部条：版权 / 服务状态 / 域名 + 备案 -->
+  <div class="plnl-footer__bar">
+    <p>© 2026 PLNL · 本德<span class="sep" aria-hidden="true">·</span>保留所有权利</p>
+
+    <div class="plnl-bar__meta">
+      <p class="plnl-status">
+        <span class="plnl-status__dot" aria-hidden="true"></span>全部服务运行正常
+      </p>
+      <p>
+        <a href="https://plnl.vip">plnl.vip</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a class="plnl-icp" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+          粤ICP备2024320296号
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M14 4h6v6M20 4l-8.5 8.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </div>
+
+</footer>

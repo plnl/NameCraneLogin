@@ -4,6 +4,8 @@
 > 纯 HTML + 内联样式，**不写 `<style>`、不写 JS、不需要构建**，复制粘贴即生效。
 >
 > *A drop-in login page skin for NameCrane CraneMail / SmarterMail. Inline styles only — no `<style>` block, no JavaScript, no build step.*
+>
+> 仓库里另附一套同品牌的[站点页脚组件](footer/)，供配套站点使用。
 
 ![v7 悬浮文案版](previews/v7-floating.jpg)
 
@@ -148,6 +150,12 @@ NameCraneLogin/
 ├─ design/
 │  ├─ full-glass-card-reference.html   ← 完整玻璃卡片设计稿（需要 <style>，本字段做不到）
 │  └─ full-glass-card-reference.jpg
+├─ footer/                         ← 附赠：同品牌站点页脚（底栏 / 多列页脚）
+│  ├─ bar.html · bar.css           ← 单行底栏（版权 / 状态 / 域名 / 备案）
+│  ├─ footer.html · footer.css     ← 完整多列页脚（深色 / 浅色 / 紧凑）
+│  ├─ bar-demo.html · index.html   ← 本地预览页
+│  ├─ previews/
+│  └─ README.md
 ├─ tools/
 │  └─ build-preview.py            ← 把代码套进模拟登录页，本地看效果
 └─ README.md
@@ -159,6 +167,27 @@ NameCraneLogin/
 python3 tools/build-preview.py snippets/v7-floating.html previews/v7-demo.html
 python3 tools/build-preview.py snippets/v6-glass-panel-photo.html out.html --system-bg   # 模拟背景被容器挡住
 ```
+
+---
+
+## 附：站点页脚组件
+
+登录页之外，仓库里还放了一套同品牌的站点页脚，供 `plnl.vip` 这类配套站点使用。同样是纯 HTML + CSS，无 JS、无依赖。
+
+**单行底栏**（最常用）— 版权 · 服务状态 · 域名 · 备案号：
+
+![独立底栏](footer/previews/bar-dark.png)
+
+```html
+<link rel="stylesheet" href="footer/bar.css" />
+<!-- 再把 footer/bar.html 贴到页面底部 -->
+```
+
+**完整多列页脚** — 品牌区 + 产品 / 资源 / 联系三列导航，带深色、浅色、紧凑三套变体：
+
+![完整页脚](footer/previews/footer-dark.png)
+
+细节见 [footer/README.md](footer/README.md)：令牌表、浅色变体、响应式行为，以及备案号必须外链 `beian.miit.gov.cn` 的合规说明。
 
 ---
 

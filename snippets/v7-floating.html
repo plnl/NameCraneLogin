@@ -1,0 +1,49 @@
+<!--
+  ────────────────────────────────────────────────────────────────────────
+  NameCraneLogin · v7 · 悬浮文案版（推荐）
+  ────────────────────────────────────────────────────────────────────────
+  去掉玻璃牌子，回到最初的排版：左侧细光线 + 短横线小标题 + 大标题 + 一行标签。
+
+  适用：NameCrane CraneMail / SmarterMail（域管理员 → 域设置 → 常规 →
+        登录显示画面 →「启用自定义登录页面 HTML 代码」）
+
+  ⚠ 这个输入框会过滤 <style> / <script>，只保留 style="" 内联属性。
+    所以本文件不使用 class、不使用 <style>、不使用伪元素。
+
+  自定义：搜「山高水长」改标题；搜「独立域名邮箱」改标签行；改 top:clamp(56px,14vw,190px) 调整上下位置。
+  ────────────────────────────────────────────────────────────────────────
+-->
+<!-- ① 背景层（z-index:-1，铺满视口） -->
+<div style="position:fixed;left:0;top:0;right:0;bottom:0;z-index:-1;pointer-events:none;overflow:hidden;background-image:linear-gradient(180deg,#05131f 0%,#07202f 18%,#0a2738 32%,#0f3143 44%,#1a3d4d 55%,#2c4955 64%,#46525a 70%,#7d6f57 75%,#96805e 78%,#6a5c45 84%,#3a3428 93%,#262219 100%);">
+
+  <!-- ①-1 你的照片：只改这一行的 url -->
+  <div style="position:absolute;left:0;top:0;width:100%;height:100%;background-image:url('https://iili.io/nkOK4Mg.jpg');background-size:cover;background-position:center center;background-repeat:no-repeat;"></div>
+
+  <!-- ①-2 四边压暗：左侧略重，给文案让出对比度 -->
+  <div style="position:absolute;left:0;top:0;right:0;bottom:0;background-image:linear-gradient(180deg,rgba(3,9,15,.40) 0%,rgba(3,9,15,0) 24%),linear-gradient(90deg,rgba(3,10,17,.78) 0%,rgba(3,10,17,.62) 22%,rgba(3,10,17,.38) 38%,rgba(3,10,17,.14) 52%,rgba(3,10,17,0) 66%),linear-gradient(0deg,rgba(2,6,10,.38) 0%,rgba(2,6,10,0) 14%);"></div>
+</div>
+
+<!-- ② 左侧文案（fixed 固定定位，不吃文档流，不会挤动系统登录框） -->
+<div style="position:fixed;left:4.5vw;top:clamp(56px,14vw,190px);width:min(80vw,360px);z-index:0;pointer-events:none;margin-left:-30px;padding:10px 14px 12px 30px;font-family:'Inter','PingFang SC','Microsoft YaHei',system-ui,sans-serif;color:#eef4f9;">
+
+  <!-- ②-1 左侧细光线 -->
+  <div aria-hidden="true" style="position:absolute;left:0;top:4px;bottom:12px;width:1px;background-image:linear-gradient(180deg,rgba(180,214,236,0) 0%,rgba(180,214,236,.30) 16%,rgba(180,214,236,.10) 62%,rgba(180,214,236,0) 100%);"></div>
+
+  <!-- ②-2 小标题：横线 + PLNL 家庭私有云 -->
+  <p style="display:flex;align-items:center;gap:12px;margin:0 0 24px;font-size:11px;letter-spacing:.3em;color:#b7cbdb;text-shadow:0 1px 3px rgba(0,0,0,.7),0 2px 16px rgba(0,0,0,.55);">
+    <span aria-hidden="true" style="display:inline-block;width:34px;height:1px;flex:0 0 auto;background:rgba(180,214,236,.5);"></span>PLNL 家庭私有云
+  </p>
+
+  <!-- ②-3 主标题 -->
+  <p style="margin:0 0 22px;font-family:'Songti SC','Noto Serif SC','Source Han Serif SC','SimSun',Georgia,serif;font-weight:500;font-size:clamp(32px,5.6vw,68px);line-height:1.22;letter-spacing:.08em;color:#f7fbfe;text-shadow:0 1px 3px rgba(4,12,20,.5),0 6px 32px rgba(4,12,20,.55);">山高水长<br />守护如一</p>
+
+  <!-- ②-4 副标题 -->
+  <p style="margin:0 0 28px;font-size:clamp(12px,1.1vw,14.5px);line-height:1.9;letter-spacing:.06em;color:#cfdeea;text-shadow:0 1px 3px rgba(0,0,0,.7),0 2px 16px rgba(0,0,0,.55);">山在这里，水在这里，家也在这里。</p>
+
+  <!-- ②-5 标签行（邮箱相关） -->
+  <p style="margin:0;font-size:clamp(10px,1vw,11.5px);letter-spacing:.14em;color:#e6eff6;text-shadow:0 1px 3px rgba(0,0,0,.7),0 2px 14px rgba(0,0,0,.55);">独立域名邮箱<span style="margin:0 14px;color:rgba(214,229,241,.45);">|</span>多端同步收发<span style="margin:0 14px;color:rgba(214,229,241,.45);">|</span>全程加密传输</p>
+</div>
+
+<!-- ③ 右下角落款 -->
+<div aria-hidden="true" style="position:fixed;right:4.5vw;bottom:56px;z-index:0;pointer-events:none;font-family:'Inter','PingFang SC',system-ui,sans-serif;font-size:10.5px;letter-spacing:.14em;color:#b6c8d6;text-shadow:0 1px 3px rgba(0,0,0,.85),0 2px 14px rgba(0,0,0,.7);">守护 · 团结 · 友爱</div>
+<!-- ═════════════════════════ 结束 ═════════════════════════ -->

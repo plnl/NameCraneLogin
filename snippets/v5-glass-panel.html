@@ -1,0 +1,81 @@
+<!--
+  ────────────────────────────────────────────────────────────────────────
+  NameCraneLogin · v5 · 玻璃牌版（纯 CSS 夜景，不依赖外部图片）
+  ────────────────────────────────────────────────────────────────────────
+  深色玻璃牌子承载文案，背景用 CSS 渐变 + 内联 SVG 山脊绘制，无任何外部资源。
+
+  适用：NameCrane CraneMail / SmarterMail（域管理员 → 域设置 → 常规 →
+        登录显示画面 →「启用自定义登录页面 HTML 代码」）
+
+  ⚠ 这个输入框会过滤 <style> / <script>，只保留 style="" 内联属性。
+    所以本文件不使用 class、不使用 <style>、不使用伪元素。
+
+  自定义：搜「山高水长」改标题；搜「独立域名邮箱」改标签行；改牌子的 rgba(7,19,29,.62) 调透明度。
+  ────────────────────────────────────────────────────────────────────────
+-->
+<div style="position:fixed;left:0;top:0;right:0;bottom:0;z-index:-1;pointer-events:none;overflow:hidden;background-image:
+  radial-gradient(56% 24% at 60% 70%,rgba(246,198,146,.24) 0%,rgba(198,152,108,.07) 52%,rgba(198,152,108,0) 74%),
+  radial-gradient(50% 34% at 10% 66%,rgba(126,164,196,.11) 0%,rgba(126,164,196,0) 74%),
+  linear-gradient(180deg,#05131f 0%,#07202f 15%,#0a2738 29%,#0f3143 41%,#1a3d4d 52%,#2c4955 61%,#46525a 67%,#7d6f57 72%,#96805e 75%,#6a5c45 81%,#3a3428 90%,#201e16 100%);">
+  <div style="position:absolute;left:0;top:0;width:100%;height:100%;background-image:radial-gradient(1.8px 1.8px at 7% 12%,rgba(255,255,255,0.95) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.2px 1.2px at 14% 7%,rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.3px 1.3px at 21% 18%,rgba(255,255,255,0.75) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(2.0px 2.0px at 28% 9%,rgba(255,255,255,0.9) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.2px 1.2px at 34% 24%,rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.4px 1.4px at 41% 6%,rgba(255,255,255,0.8) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.2px 1.2px at 48% 20%,rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(2.1px 2.1px at 55% 10%,rgba(255,255,255,0.92) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.3px 1.3px at 62% 23%,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.2px 1.2px at 69% 8%,rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.3px 1.3px at 76% 17%,rgba(255,255,255,0.55) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.2px 1.2px at 83% 26%,rgba(255,255,255,0.45) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.5px 1.5px at 90% 12%,rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.3px 1.3px at 95% 22%,rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(2.2px 2.2px at 3% 26%,rgba(255,255,255,0.85) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.6px 1.6px at 45% 3%,rgba(255,255,255,0.75) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.1px 1.1px at 58% 30%,rgba(255,255,255,0.35) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.2px 1.2px at 72% 33%,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0) 100%)
+radial-gradient(1.6px 1.6px at 88% 31%,rgba(255,255,255,0.45) 0%,rgba(255,255,255,0) 100%);"></div>
+  <div style="position:absolute;left:26%;top:12%;width:18px;height:18px;border-radius:50%;background-image:radial-gradient(circle at 38% 34%,rgba(252,246,232,.95) 0%,rgba(228,210,182,.5) 62%,rgba(228,210,182,0) 74%);box-shadow:0 0 24px 7px rgba(248,236,214,.13),0 0 80px 30px rgba(200,216,236,.06);"></div>
+  <svg viewBox="0 0 1920 1080" preserveAspectRatio="none" style="position:absolute;left:0;bottom:0;width:100%;height:100%;display:block">
+    <defs>
+      <linearGradient id="f" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#6b6866"/><stop offset="0.06" stop-color="#434b55"/>
+        <stop offset="0.3" stop-color="#2b343d"/><stop offset="0.62" stop-color="#182029"/>
+        <stop offset="1" stop-color="#0c1218"/>
+      </linearGradient>
+      <linearGradient id="m" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#232c35"/><stop offset="0.45" stop-color="#101820"/><stop offset="1" stop-color="#060b0f"/>
+      </linearGradient>
+      <linearGradient id="n" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0a1015"/><stop offset="1" stop-color="#010304"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#f)" filter="blur(3.4px)" d="M0,780 L38,781 L97,662 L149,660 L170,662 L190,660 L212,705 L257,660 L282,715 L340,686 L394,662 L426,660 L581,716 L611,750 L674,686 L731,724 L776,745 L831,749 L868,729 L930,700 L984,730 L1023,727 L1079,704 L1129,713 L1156,730 L1176,700 L1242,707 L1281,749 L1330,764 L1352,752 L1400,717 L1421,719 L1480,740 L1516,743 L1535,746 L1563,767 L1584,757 L1610,762 L1653,780 L1676,782 L1729,749 L1799,777 L1834,773 L1895,755 L1920,684 L1920,1080 L0,1080 Z"/>
+    <path fill="url(#m)" filter="blur(2px)"   d="M0,870 L28,876 L86,855 L154,876 L183,858 L251,787 L306,775 L374,776 L436,775 L503,825 L549,775 L660,794 L679,775 L751,790 L794,782 L854,775 L937,831 L1003,866 L1067,782 L1115,801 L1145,786 L1197,802 L1243,808 L1292,777 L1315,811 L1333,846 L1389,832 L1443,864 L1500,775 L1528,789 L1568,797 L1601,775 L1671,801 L1712,775 L1773,831 L1806,812 L1871,820 L1920,814 L1920,1080 L0,1080 Z"/>
+    <path fill="url(#n)" filter="blur(0.8px)" d="M0,950 L53,921 L118,901 L154,898 L208,890 L274,892 L333,933 L399,908 L449,890 L490,900 L551,890 L612,929 L634,934 L657,965 L679,933 L731,948 L801,953 L858,940 L925,955 L975,914 L1045,919 L1098,890 L1315,919 L1372,939 L1422,917 L1488,948 L1534,909 L1596,938 L1661,965 L1711,994 L1759,952 L1799,917 L1855,922 L1919,931 L1920,968 L1920,1080 L0,1080 Z"/>
+  </svg>
+  <div style="position:absolute;left:0;top:0;right:0;bottom:0;background-image:linear-gradient(180deg,rgba(3,9,15,.35) 0%,rgba(3,9,15,0) 26%),linear-gradient(90deg,rgba(3,10,17,.5) 0%,rgba(3,10,17,.12) 32%,rgba(3,10,17,0) 56%),linear-gradient(0deg,rgba(2,6,10,.45) 0%,rgba(2,6,10,0) 14%);"></div>
+</div>
+<!-- ② 左侧身份牌：品牌 + 文案（玻璃质感，压在任何照片上都读得清） -->
+<div style="position:fixed;left:4.5vw;top:clamp(12px,6vh,140px);width:min(80vw,330px);z-index:0;pointer-events:none;padding:16px 20px 18px;border-radius:20px;background:rgba(7,19,29,.62);border:1px solid rgba(152,188,216,.18);box-shadow:0 26px 64px -30px rgba(0,0,0,.95),inset 0 1px 0 rgba(255,255,255,.07);-webkit-backdrop-filter:blur(16px) saturate(125%);backdrop-filter:blur(16px) saturate(125%);font-family:'Inter','PingFang SC','Microsoft YaHei',system-ui,sans-serif;color:#eef4f9;">
+  <div style="display:flex;align-items:center;gap:10px;margin:0 0 18px;">
+    <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;flex:0 0 auto;border-radius:8px;background-image:linear-gradient(165deg,#bfe4fa 0%,#5f9fc9 42%,#24506e 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 6px 16px -8px rgba(4,12,20,.9);">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true">
+        <path d="M3 17.5 9 9.5l3.4 4.6L15 11l6 6.5" stroke="#08202f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="8.2" cy="6.4" r="1.6" fill="#08202f"/>
+      </svg>
+    </span>
+    <span style="display:inline-flex;flex-direction:column;gap:3px;line-height:1;">
+      <span style="font-size:12.5px;font-weight:600;letter-spacing:.4em;color:#f2f8fc;">PLNL</span>
+      <span style="font-size:7.5px;font-weight:500;letter-spacing:.3em;color:#a9bfd0;">PERSONAL CONSOLE</span>
+    </span>
+  </div>
+  <p style="margin:0 0 12px;font-family:'Songti SC','Noto Serif SC','Source Han Serif SC','SimSun',Georgia,serif;font-weight:500;font-size:clamp(21px,3.4vw,52px);line-height:1.26;letter-spacing:.08em;color:#ffffff;text-shadow:0 1px 3px rgba(4,12,20,.55);">山高水长<br />守护如一</p>
+  <p style="margin:0 0 12px;font-size:clamp(11px,1vw,13px);line-height:1.8;letter-spacing:.06em;color:#cfdeea;">山在这里，水在这里，家也在这里。</p>
+  <p style="margin:0;font-size:clamp(9.5px,.86vw,10.5px);letter-spacing:.12em;color:#9db4c6;">独立域名邮箱<span style="margin:0 9px;color:rgba(180,206,226,.4);">|</span>多端同步收发<span style="margin:0 9px;color:rgba(180,206,226,.4);">|</span>全程加密传输</p>
+</div>
+
+<!-- ③ 右下角落款 -->
+<div aria-hidden="true" style="position:fixed;right:4.5vw;bottom:56px;z-index:0;pointer-events:none;font-family:'Inter','PingFang SC',system-ui,sans-serif;font-size:10.5px;letter-spacing:.14em;color:#b6c8d6;text-shadow:0 1px 3px rgba(0,0,0,.85),0 2px 14px rgba(0,0,0,.7);">守护 · 团结 · 友爱</div>
+<!-- ═════════════════════════ 结束 ═════════════════════════ -->
